@@ -1,0 +1,16 @@
+'tosreancode.neos:FormSection':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  childNodes:
+    inputForm:
+      type: 'Neos.Neos:ContentCollection'
+  ui:
+    group: 'general'
+    label: 'Form Section'
+    icon: 'icon-home'
+    inspector:
+      groups:
+        'form':
+          label: 'Section Form'
+          icon: 'icon-link'
+          position: 50

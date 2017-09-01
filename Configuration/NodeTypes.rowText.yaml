@@ -1,0 +1,25 @@
+'tosreancode.neos:RowText':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    label: 'Row Text'
+    group: 'general'
+    icon: 'icon-link'
+    inspector:
+      groups:
+        'rowSection':
+          label: 'Row Text'
+          icon: 'icon-link'
+          position: 50
+  properties:
+    textInfo:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Text Info'
+        icon: 'icon-home'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'Text Here'
+        inspector:
+          group: 'rowSection'

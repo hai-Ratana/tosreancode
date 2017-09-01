@@ -1,0 +1,43 @@
+'tosreancode.neos:contentIcon':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    group: 'general'
+    label: 'content with Icon'
+    icon: 'icon-home'
+
+    inspector:
+      groups:
+        'contentIcon':
+          label: 'Content with Icon'
+          icon: 'icon-home'
+          position: 50
+  properties:
+    iconName:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'emmbed Icon'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'contentIcon'
+    contentHeader:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Content header'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: ' Content header'
+        inspector:
+          group: 'contentIcon'
+    subcontentHeader:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'subcontent Header'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'subcontent Header'
+        inspector:
+          group: 'contentIcon'

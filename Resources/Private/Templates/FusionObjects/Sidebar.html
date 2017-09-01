@@ -1,0 +1,14 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+
+        </li>
+        <f:for each="{items}" as="item" iteration="menuItemIterator">
+					<li class="{item.state}">
+						<neos:link.node node="{item.node}">{item.label}</neos:link.node>
+					</li>
+			</f:for>
+    </ul>
+</div>

@@ -1,0 +1,15 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<div class="col-md-4 col-sm-6 portfolio-item">
+    <a href="#portfolioModal1" class="portfolio-link" >
+        <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+                <h1>{f:if(condition:texthover ,then: '{texthover}')} </h1>
+            </div>
+        </div>
+        <img src="{neos.media:uri.image(image: node.properties.imageContent)}" width="360" height="280" alt="">
+    </a>
+    <div class="portfolio-caption">
+        <h4>{neos:contentElement.editable(property: 'portfolioHeader')}</h4>
+        <p class="text-muted">{neos:contentElement.editable(property: 'portfolioSubH')}</p>
+    </div>
+</div>

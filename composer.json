@@ -1,0 +1,22 @@
+{
+    "description": "",
+    "type": "neos-site",
+    "require": {
+        "neos/neos": "*",
+        "neos/nodetypes": "*"
+    },
+    "suggest": {
+        "neos/seo": "*"
+    },
+    "name": "tosreancode/neos",
+    "autoload": {
+        "psr-4": {
+            "tosreancode\\neos\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "tosreancode.neos"
+        }
+    }
+}

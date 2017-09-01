@@ -1,0 +1,12 @@
+blogPage < default
+blogPage.body {
+  templatePath = 'resource://tosreancode.neos/Private/Templates/Page/Blog.html'
+  part{
+    submenu = Menu{
+    entryLevel = 2
+    templatePath = 'resource://tosreancode.neos/Private/Templates/FusionObjects/Sidebar.html'
+    maximumLevels = 2
+    }
+  }
+
+  }

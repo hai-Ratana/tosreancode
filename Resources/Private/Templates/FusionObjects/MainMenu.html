@@ -1,0 +1,17 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse js-navbar-collapse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav">
+				<li class="hidden">
+						<a href="#page-top"></a>
+				</li>
+
+
+				<f:for each="{items}" as="item" iteration="menuItemIterator">
+					<li class="{item.state}">
+						<neos:link.node node="{item.node}">{item.label}</neos:link.node>
+					</li>
+			</f:for>
+		</ul>
+</div>
+<!-- /.navbar-collapse -->

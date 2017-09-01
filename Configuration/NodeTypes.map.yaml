@@ -1,0 +1,38 @@
+'tosreancode.neos:GoogleMap':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    group: 'general'
+    label: 'Google Map'
+    icon: 'icon-home'
+    inspector:
+      groups:
+        'map':
+          label: 'Emmbed Google Map'
+          icon: 'icon-home'
+          position: 50
+  properties:
+    idMap:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'ID Google Map'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'map'
+    width:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Width'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'map'
+    height:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'height'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'map'

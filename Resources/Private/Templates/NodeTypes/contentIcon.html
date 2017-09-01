@@ -1,0 +1,9 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<div class="col-md-4">
+    <span class="fa-stack fa-4x">
+        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+        <i class="fa {f:if(condition:iconName, then: '{iconName}')} fa-stack-1x fa-inverse"></i>
+    </span>
+    <h4 class="service-heading">{neos:contentElement.editable(property: 'contentHeader')}</h4>
+    <p class="text-muted">{neos:contentElement.editable(property: 'subcontentHeader')}</p>
+</div>

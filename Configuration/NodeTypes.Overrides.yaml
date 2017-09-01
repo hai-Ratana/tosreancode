@@ -1,0 +1,191 @@
+# If you need more than just the "main" content area you can uncomment the snippet below. It will add a "sidebar" area
+# to your pages. You can add as many areas as you like, still only those that are rendered in your Fusion-code and
+# Template are visible on your page.
+---
+'Neos.NodeTypes:Page':
+  childNodes:
+    mainHeader:
+      type: 'Neos.Neos:ContentCollection'
+  ui:
+    inspector:
+      groups:
+        header:
+          label: 'header properties'
+          position: 50
+        nameWeb:
+          label: 'website'
+          position: 50
+
+  properties:
+    slide1:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Image slide frist'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'header'
+    caption1:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Caption for First Slide'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'header'
+    subCaption1:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'subCaption for First slide'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'header'
+    slide2:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Image slide second'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'header'
+    caption2:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Caption for second Slide'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'header'
+    subCaption2:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'subCaption for second slide'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'header'
+    slide3:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Image Third frist'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'header'
+    caption3:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Caption for third Slide'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'header'
+    subCaption3:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'subCaption for third slide'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'header'
+    website:
+      type: string
+      defaultValue: 'tosreancode'
+      ui:
+        label: 'website name'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'nameWeb'
+
+
+
+
+'Neos.NodeTypes:TwoColumn':
+  properties:
+    'layout':
+      defaultValue: '6-6'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '50-50': ~
+              '75-25': ~
+              '25-75': ~
+              '66-33': ~
+              '33-66': ~
+              '6-6':
+                label: '50% / 50%'
+              '8-4':
+                label: '66% / 33%'
+              '4-8':
+                label: '33% / 66%'
+
+##
+# Adjust the "ThreeColumn" node type:
+# Disable some of the layout options, override labels and set the default layout
+#
+'Neos.NodeTypes:ThreeColumn':
+  properties:
+    'layout':
+      defaultValue: '4-4-4'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '33-33-33': ~
+              '50-25-25': ~
+              '25-50-25': ~
+              '25-25-50': ~
+              '4-4-4':
+                label: '33% / 33% / 33%'
+              '6-3-3':
+                label: '50% / 25% / 33%'
+              '3-6-3':
+                label: '25% / 50% / 25%'
+              '3-3-6':
+                label: '25% / 25% / 50%'
+
+##
+# Adjust the "FourColumn" node type:
+# Disable some of the layout options, override labels and set the default layout
+#
+'Neos.NodeTypes:FourColumn':
+  properties:
+    'layout':
+      defaultValue: '3-3-3-3'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '25-25-25-25': ~
+              '3-3-3-3':
+                label: '25% / 25% / 25% / 25%'
+'tosreancode.neos:Carousel':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  childNodes:
+    carouselItems:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': FALSE
+          'Neos.NodeTypes:Headline': TRUE
+          'Neos.NodeTypes:Text': TRUE
+          'Neos.NodeTypes:TextWithImage': TRUE
+          'Neos.NodeTypes:Image': TRUE
+          'Neos.NodeTypes:Html': TRUE
+          'Neos.NodeTypes:ContentReferences': TRUE
+          'Neos.Demo:YouTube': TRUE
+  ui:
+    label: carousel
+    group: 'plugins'
+    icon: 'icon-picture'
+    inlineEditable: TRUE
+    help:
+      message: |
+        Bootstrap carousel which can display the following types of content:
+        * Headline
+        * Text
+        * TextWithImage
+        * Image
+        * HTML
+        * YouTube
+        * References

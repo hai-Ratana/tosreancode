@@ -1,0 +1,100 @@
+'tosreancode.neos:contentMember':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+
+  ui:
+    label: 'content member'
+    icon: 'icon-home'
+    group: 'general'
+    inspector:
+      groups:
+        'member':
+          label: 'Content Member'
+          icon: 'icon-home'
+          position: 50
+  properties:
+    imgProfile:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Profile Picture'
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'image'
+        inspector:
+          group: 'member'
+          position: 50
+    name:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'name member'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'name member'
+        inspector:
+          group: 'member'
+    position:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'position'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'position'
+        inspector:
+          group: 'member'
+    social1:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'emmbed social Icon I'
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'social 1'
+        inspector:
+          group: 'member'
+    link1:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'emmbed link to ur social '
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'member'
+    social2:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'emmbed social Icon II'
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'social 2'
+        inspector:
+          group: 'member'
+    link2:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'emmbed link to ur social '
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'member'
+    social3:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'emmbed social Icon III'
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'social 3'
+        inspector:
+          group: 'member'
+    link3:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'emmbed link to ur social '
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'member'
+    

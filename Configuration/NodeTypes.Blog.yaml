@@ -1,0 +1,45 @@
+'tosreancode.neos:Blog':
+  superTypes:
+    'Neos.NodeTypes:Page': TRUE
+  ui:
+    label: 'page Blog'
+    icon: 'icon-picture'
+    group: 'general'
+    inspector:
+      groups:
+        blog:
+          label: 'Page properties'
+          icon: 'icon-picture'
+          position: 50
+  properties:
+    'layout':
+      defaultValue: 'blogPage'
+    background:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Background image'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'blog'
+          position: 50
+    titleIntro:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Title introduction'
+        inliebackground:
+          type: Neos\Media\Domain\Model\ImageInterface
+          ui:
+            label: 'Background image'
+            reloadIfChanged: TRUE
+            inspector:
+              group: 'blog'
+              position: 50
+        titleIntro:
+          type: string
+          defaultValue: ''
+          ui:
+            label: 'Title introduction'
+            inlineEditable: TRUE
+            inspector:
+              group: 'blog'

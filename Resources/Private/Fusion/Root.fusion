@@ -1,0 +1,67 @@
+namespace: Site=tosreancode.neos
+include: NodeTypes/*
+
+page = Neos.Neos:Page {
+
+
+
+	head {
+		stylesheets.site = Neos.Fusion:Template {
+			templatePath = 'resource://tosreancode.neos/Private/Templates/Page/Default.html'
+			sectionName = 'stylesheets'
+		}
+
+		javascripts.site = Neos.Fusion:Template {
+			templatePath = 'resource://tosreancode.neos/Private/Templates/Page/Default.html'
+			sectionName = 'headScripts'
+		}
+	}
+
+	body {
+		templatePath = 'resource://tosreancode.neos/Private/Templates/Page/Default.html'
+		sectionName = 'body'
+		parts {
+		mainMenu = Menu {
+			entryLevel = 1
+			templatePath = 'resource://tosreancode.neos/Private/Templates/FusionObjects/MainMenu.html'
+			maximumLevels = 1
+			}
+		}
+
+		// These are your content areas, you can define as many as you want, just name them and the nodePath.
+		content {
+			// The default content section
+			main = Neos.Neos:PrimaryContent {
+				nodePath = 'main'
+			}
+			mainHeader = Neos.Neos:PrimaryContent{
+				nodePath = 'mainHeader'
+			}
+
+		}
+		homepage = ${q(site).get(0)}
+
+		javascripts.site = Neos.Fusion:Template {
+			templatePath = 'resource://tosreancode.neos/Private/Templates/Page/Default.html'
+			sectionName = 'bodyScripts'
+		}
+	}
+}
+prototype(tosreancode.neos:SectionBody) < prototype(Neos.Neos:Content) {
+      templatePath = 'resource://tosreancode.neos/Private/Templates/NodeTypes/SectionBody.html'
+      childContent = Neos.Neos:ContentCollection
+      childContent {
+              nodePath = 'subContent'
+      }
+  }
+prototype(tosreancode.neos:FormSection) < prototype(Neos.Neos:Content) {
+            templatePath = 'resource://tosreancode.neos/Private/Templates/NodeTypes/FormSection.html'
+            inputForm = Neos.Neos:ContentCollection
+            inputForm {
+                    nodePath = 'inputForm'
+            }
+}
+
+
+default < page
+include: Pages/*

@@ -1,0 +1,60 @@
+'tosreancode.neos:InputForm':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    label: 'Input Form'
+    icon: 'icon-home'
+    group: 'general'
+    inspector:
+      groups:
+        inputElement:
+          label: 'Input Element'
+          icon: 'icon-home'
+          position: 50
+  properties:
+    inputType:
+      type: string
+      defaultValue: 'text'
+      ui:
+        label: 'Type'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'inputElement'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'text'
+            values:
+              text:
+                label: 'text'
+              password:
+                label: 'password'
+    inputPlaceholder:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'placeholder'
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'Input Form placeholder'
+        inspector:
+          group: 'inputElement'
+    inputId:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Id'
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'Input ID Form'
+        inspector:
+          group: 'inputElement'
+    help-message:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Help Message'
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'help-message'
+        inspector:
+          group: 'inputElement'

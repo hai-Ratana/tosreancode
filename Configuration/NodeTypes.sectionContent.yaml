@@ -1,0 +1,76 @@
+'tosreancode.neos:SectionBody':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  childNodes:
+    subContent:
+      type: 'Neos.Neos:ContentCollection'
+
+  ui:
+    label: 'Section'
+    icon: 'icon-link'
+    group: 'general'
+    inspector:
+      groups:
+        'bgSection':
+          label: 'Section'
+          icon: 'icon-link'
+          position: 50
+  properties:
+    section:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Background Section'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'bgSection'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Default'
+            values:
+              '':
+                label: 'white'
+              bg-light-gray:
+                label: 'Gray'
+    sectionHeader:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Section-Header'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'Section header'
+        inspector:
+          group: 'bgSection'
+    subSectionHeader:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'subsection-Header'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'subsection Header'
+        inspector:
+          group: 'bgSection'
+    idSection:
+      type: string
+      defaultValue: 'services'
+      ui:
+        label: 'ID section'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'bgSection'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'services'
+            values:
+              services:
+                label: 'services'
+              portfolio:
+                label: 'portfolio'
+              about:
+                label: 'about'
+              team:
+                label: 'team'
+              contact:
+                label: 'contact'

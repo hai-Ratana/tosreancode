@@ -1,0 +1,11 @@
+<div >
+  <f:if condition="{idMap}">
+  <f:then>
+  <iframe src="https://www.google.com/maps/embed?pb={idMap}" {f:if(condition: width, then: ' width="{width}"')}{f:if(condition: height, then: ' height="{height}"')}  frameborder="0" style="border:0" allowfullscreen>
+  </iframe>
+</f:then>
+<f:else>
+  <p> please input Id Google Map </p>
+</f:else>
+</f:if>
+</div>

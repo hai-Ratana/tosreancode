@@ -1,0 +1,50 @@
+'tosreancode.neos:contentPortfolio':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    group: 'general'
+    label: 'Portfolio content'
+    icon: 'icon-home'
+    inspector:
+      groups:
+        'portfolio':
+          label: 'portfolio Content'
+          icon: 'icon-home'
+          position: 50
+  properties:
+    texthover:
+      type: string
+      defaultValue: 'Default'
+      ui:
+        label: 'hover Text'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'portfolio'
+    portfolioHeader:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'content Header'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'content Header'
+        inspector:
+          group: 'portfolio'
+    portfolioSubH:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'subcontent Header'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'subcontent Header'
+        inspector:
+          group: 'portfolio'
+    imageContent:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'image content'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'portfolio'
+          position: 50

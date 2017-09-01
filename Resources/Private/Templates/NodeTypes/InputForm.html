@@ -1,0 +1,7 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<div class="col-md-6">
+<div class="form-group">
+    <input {f:if(condition:inputType ,then: 'type="{inputType}"')}  class="form-control" {f:if(condition:inputPlaceholder ,then: 'placeholder="{inputPlaceholder}"')}{f:if(condition:inputId ,then: 'id="{inputId}"')}  required {f:if(condition:help-message ,then: 'data-validation-required-message="{help-message}"')}>
+    <p class="help-block text-danger"></p>
+</div>
+</div>

@@ -1,0 +1,16 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<div class="col-sm-4">
+    <div class="team-member">
+        <img src="{neos.media:uri.image(image: node.properties.imgProfile)}" width="250" height="200" class="img-responsive img-circle" alt="">
+        <h4>{neos:contentElement.editable(property: 'name')}</h4>
+        <p class="text-muted">{neos:contentElement.editable(property: 'position')}</p>
+        <ul class="list-inline social-buttons">
+            <li><a href="{f:if(condition:link1 ,then: '{link1}')}"><i {f:if(condition:social1 ,then: 'class="{social1}"')}></i></a>
+            </li>
+            <li><a href="{f:if(condition:link2 ,then: '{link2}')}"><i  {f:if(condition:social2 ,then: 'class="{social2}"')}></i></a>
+            </li>
+            <li><a href="{f:if(condition:link3 ,then: '{link3}')}"><i {f:if(condition:social3 ,then: 'class="{social3}"')} ></i></a>
+            </li>
+        </ul>
+    </div>
+</div>
